@@ -1,0 +1,41 @@
+{
+  "name": "electron-klienci-sqlite",
+  "version": "1.0.0",
+  "description": "Aplikacja desktopowa do zarządzania klientami i notatkami z bazą SQLite.",
+  "author": "Gloxy",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.twojafirma.electronklienci",
+    "productName": "Klientownik",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "ikona.ico"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/electron{,**/*}",
+      "!node_modules/.bin",
+      "!node_modules/electron-builder{,**/*}",
+      "!electron-rebuild{,**/*}",
+      "!@electron/rebuild{,**/*}"
+    ],
+    "extraMetadata": {
+      "main": "main.js"
+    }
+  }
+}

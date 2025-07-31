@@ -1,0 +1,346 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f8fb;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #2d3e50;
+    padding: 32px 0 24px 0;
+    margin-bottom: 40px;
+}
+
+.header-content h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+footer {
+    background: #2d3e50;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
+    z-index: 10;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    max-width: 1800px;
+    margin: 0 auto 80px auto;
+    width: 100%;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 32px 24px 24px 24px;
+    min-width: 350px;
+    max-width: 900px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.clients-card {
+    min-width: 700px;
+    max-width: 1100px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 18px;
+    max-height: 600px; 
+    overflow-y: auto;  
+}
+
+.table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+    font-size: 1rem;
+    table-layout: fixed;
+    word-break: break-all;
+}
+
+.table th, .table td {
+    border: 1px solid #e0e0e0;
+    padding: 8px 10px;
+    text-align: left;
+    max-width: 220px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+.table th {
+    background: #f6f8fb;
+    font-weight: 600;
+}
+
+.table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.table tr:hover {
+    background: #f1f1f1;
+}
+
+.green-btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 6px;
+    transition: background 0.2s;
+}
+
+.green-btn:hover {
+    background-color: #218838;
+}
+
+button {
+    font-family: inherit;
+}
+
+#client-form {
+    margin-top: 18px;
+    width: 100%;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 18px 12px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#client-form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: 500;
+    width: 100%;
+    max-width: 320px;
+    text-align: left;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+}
+
+#client-form input[type="text"] {
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    margin-bottom: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-actions {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+#client-form.hidden {
+    display: none;
+}
+
+#message {
+    margin-top: 10px;
+    color: #28a745;
+    font-weight: 500;
+}
+
+.action-btn {
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.edit-btn {
+    background: #ffc107;
+    color: #222;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: #fff;
+}
+
+.notes-card {
+    min-width: 300px;
+    max-width: 350px;
+}
+
+#notes-list {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.note {
+    background: #e3f0ff;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 1rem;
+    color: #2d3e50;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    white-space: normal;       
+    overflow-wrap: break-word; 
+}
+
+.note .note-remove {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: #fff;
+    color: #dc3545;
+    border: none;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    line-height: 20px;
+    text-align: center;
+}
+
+.note-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.note-form input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.note-form.hidden {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .clients-card, .notes-card {
+        min-width: 90vw;
+        max-width: 98vw;
+    }
+    .table {
+        min-width: 600px;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.35);
+    justify-content: center;
+    align-items: center;
+}
+.modal.show {
+    display: flex;
+}
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 22px 12px 22px;
+    min-width: 0;
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.close-modal {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+}
+#modal-title {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 1.2rem;
+    color: #2d3e50;
+}
+@media (max-width: 500px) {
+    .modal-content {
+        min-width: 0;
+        padding: 16px 6px 12px 6px;
+    }
+    #client-form input[type="text"] {
+        font-size: 0.95rem;
+    }
+}
+
+.custom-message {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 20px;
+    border: 2px solid #dc3545;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+.custom-message.hidden {
+    display: none;
+}
+.custom-message p {
+    margin: 0 0 10px;
+}
+.custom-message button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+/*Nowe*/
+

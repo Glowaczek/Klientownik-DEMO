@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twoja nazwa - Klienci i Notatki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Twoja nazwa Firmy</h1>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <section class="card clients-card">
+                <h2>Lista klientów</h2>
+                <div style="display:flex;gap:8px;margin-bottom:10px;">
+                    <input type="text" id="search-client" placeholder="Szukaj klienta..." style="flex:1;padding:8px;">
+                    <button id="search-btn" class="green-btn" type="button">Wyszukaj</button>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table" id="clientsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Imię</th>
+                                <th>Nazwisko</th>
+                                <th>Telefon</th>
+                                <th>Miejsce <br>zamieszkania</th>
+                                <th>Data rejestracji</th>
+                                <th>Akcje</th>
+                            </tr>
+                        </thead>
+                        <tbody id="client-list"></tbody>
+                    </table>
+                </div>
+                <button id="show-form-btn" class="green-btn">+ Dodaj klienta</button>
+                
+            </section>
+            <section class="card notes-card">
+                <h2>Notatki</h2>
+                <form id="note-form" class="note-form hidden">
+                    <input type="text" id="note-input" placeholder="Treść notatki..." required maxlength="200">
+                    <button type="submit" class="green-btn">Dodaj</button>
+                    <button type="button" id="cancel-note-btn">Anuluj</button>
+                </form>
+                <button id="add-note-btn" class="green-btn">+ Dodaj notatkę</button>
+                <div id="notes-list"></div>
+            </section>
+        </div>
+    </main>
+    
+    <div id="client-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal-btn">&times;</span>
+            <h3 id="modal-title">Dodaj klienta</h3>
+            <form id="client-form" autocomplete="off">
+                <label for="first-name">Imię:</label>
+                <input type="text" id="first-name" name="first-name" required maxlength="50">
+                <label for="last-name">Nazwisko:</label>
+                <input type="text" id="last-name" name="last-name" required maxlength="50">
+                <label for="phone">Numer telefonu:</label>
+                <input type="text" id="phone" name="phone" required placeholder="000-000-000 lub 000000000" maxlength="11">
+                <label for="address">Miejsce zamieszkania:</label>
+                <input type="text" id="address" name="address" required maxlength="100">
+                <div class="form-actions">
+                    <button type="submit" class="green-btn">Zapisz</button>
+                    <button type="button" id="cancel-form-btn">Anuluj</button>
+                </div>
+            </form>
+            <div id="message"></div>
+        </div>
+    </div>
+    
+    <div id="custom-message" class="custom-message hidden">
+      <p id="custom-message-text"></p>
+      <button id="custom-message-close">OK</button>
+    </div>
+    <footer>
+        <div class="footer-content">
+            Wykonał @maly.przedsiebiorca x Gloxy 
+        </div>
+    </footer>
+    <script src="renderer.js"></script>
+
+</body>
+</html>
