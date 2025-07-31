@@ -4,7 +4,7 @@
 
 **Klientownik** to intuicyjna, lokalna aplikacja desktopowa zaprojektowana do efektywnego zarządzania bazą klientów i notatek. Program ten stanowi wersję demonstracyjną darmowego narzędzia, które planuję udostępniać na moich mediach społecznościowych, aby wspierać małe firmy i osoby prowadzące jednoosobową działalność gospodarczą w organizacji ich danych klientów.
 
-Aplikacja ma na celu uproszczenie codziennych operacji związanych z zarządzaniem kontaktami, umożliwiając szybki dostęp do kluczowych informacji o klientach oraz do ich historii komunikacji poprzez system notatek. Jest to projekt typu **open-source**, którego rozwój jest otwarty na wkład społeczności.
+Aplikacja ma na celu uproszczenie codziennych operacji związanych z zarządzaniem kontaktami, umożliwiając szybki dostęp do kluczowych informacji o klientach oraz do ich historii komunikacji poprzez system notatek. Jest to projekt typu **open-source**, którego rozwój jest otwarty na wkład społeczności. Program napisany z pomocą Copilot
 
 ## Pliki projektu
 - **main.js**: Główny punkt wejścia aplikacji Electron. Tworzy główne okno i ustawia IPC (Inter-Process Communication) do obsługi operacji na klientach i notatkach.
